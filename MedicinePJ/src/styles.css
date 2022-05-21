@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant Garamond:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+ 
+  
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+/*container*/
+.container{
+ height: 100vh;
+ width: 100%;
+ overflow-y: scroll;
+ scroll-behavior: smooth;
+ scroll-snap-type:  y mandatory;
+
+ /*css scroll*/
+}
+/*navbar*/
+
+
+
+/* Open & Close Icons JavaScript @ bottom in HTML code */
+.toggle
+{
+ 
+  right: 5%;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url(/img/icons8-menu-rounded-50.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  
+}
+.toggle.active
+{
+  position: absolute;
+  background: url(/img/icons8-close-36.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+/*banner Dr.sabi */
+
+.banner
+{
+  background-image: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 600px;
+  width: 500px;
+  bottom: -2%;
+  right: 10%;
+  left: 47%;
+  padding: 20px;
+  position: absolute; 
+ 
+}
+
+
+/* Menu Tab Movement Space & Timing */
+.Home
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1.5s;
+  z-index: 2;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); 
+  background: cover;
+ 
+}
+
+.Home.active
+{
+  right: 300px;
+}
+.overlay
+{
+/* Mixblend-mode options*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+/*Herbal Text*/
+.text h2
+{
+  font-size: 8em;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 7em;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  line-height: 1em;
+  text-transform: uppercase;
+  
+}
+.text p
+{
+  font-size: 1.7em;
+  color: rgb(0, 0, 0);
+  margin: 10px 0;
+  font-weight: 100;
+  max-width: 500px;
+  text-align: left;
+  
+}
+.text a
+{
+    /*Explore Bar*/
+  display: inline-block;
+  font-size: 1em;
+  background: rgb(123, 218, 114);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.7) translateY(-15px);
+}
+/*Menu Tab Background*/
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+  text-transform: uppercase;
+  
+}
+.menu img 
+{
+  position: absolute;
+  justify-content: center;
+  height: 900px;
+  width: 1000px;
+  opacity: 0.3;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(29, 29, 29);
+  text-align: center;
+}
+.menu ul li a:hover
+{
+  color: hsl(71, 59%, 84%); 
+}
+
+.backdrop img 
+{
+position: fixed; 
+max-height: 1200px;
+max-width: 800px;
+left: 44%;
+top: -40%;
+
+}
+.backdrop2 img 
+{
+position: absolute; 
+left: 10%;
+top: 50%;
+width:1200px;
+height: 900px;
+
+
+}
+.backdrop3 img 
+{
+position: fixed; 
+left: -5%;
+top: 30%;
+height: 172px;
+width:172px;
+
+
+}
+/*About section*/
+.About
+{
+  position: relative;
+  width: 100%;
+  height: 280vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  background-image: linear-gradient(to top, #ffffff 0%, #ffffff 100%);
+  background: cover;
+  scroll-snap-align: center;
+ 
+}
+/*Photo Slide*/
+.contain {
+  width: 100%;
+  height: 75%;
+  position: relative;
+  right: 0%;
+  top: 3%;
+  
+}
+.row {
+  overflow: scroll;
+  width: 100%;
+  height: 50%;
+  
+}
+.row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70.3125px 0;
+  padding-bottom: 0px;
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 350px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+ 
+}
+.tile__img {
+  width: 280px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+     
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 1px;
+  opacity: 0;
+
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+  
+}
+.tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgb(37, 207, 199);
+  z-index: 1;
+}
+.tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}
+
+.text2
+{
+  position: fixed;
+  z-index: 10;
+}
+.text2 h1 {
+  position: fixed;
+  font-size: 8em;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  top: 5%;
+  bottom: 50%;
+  right: 50%;
+  left: 10%;
+  align-items: center;
+}
+.text2 p {
+position: fixed;
+font-size: 1.3em;
+align-items: center;
+font-weight: 200;
+top: 20%;
+bottom: 90%;
+right: 50%;
+left: 10%;
+max-width: 450%;
+max-height: 50%;
+justify-content: center;
+}
+/*Remedies*/
+.Remedies
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  background-image: linear-gradient(to top, #2cb420 0%, #ffd900 100%);
+  background: cover;
+  scroll-snap-align: center;
+ 
+}
+
+
+@media (max-width: 991px)
+{
+  .Home,
+  .Home header 
+{
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 5.8em;
+  }
+  .text h3
+  {
+    font-size: 4.7em;
+  }
+  .banner
+  {
+    background: cover;
+    height: 400px;
+    width: 330px;
+    bottom: 0%;
+    top: 60%;
+    left:50%;
+    right: 90%;
+    position: fixed;
+  }
+  .backdrop img
+  {
+    height: 400px;
+    width: 400px;
+    bottom: 0%;
+    top: 60%;
+    left:-50%;
+    right: 90%;
+    position: absolute;
+  }
+  .backdrop2 img
+  {
+    height: 400px;
+    width: 400px;
+    bottom: 0%;
+    top: 60%;
+    left:-50%;
+    right: 90%;
+    position: absolute;
+  }
+  .text p
+  {
+    font-size: 1.4em;
+    width: 100%;
+    text-align: left;
+    max-width: 300px
+  }
+  .text2
+{
+  position: fixed;
+  z-index: 10;
+}
+.text2 h1 {
+  position: fixed;
+  font-size: 4em;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  top: 19%;
+  bottom: 50%;
+  right: 50%;
+  left: 12%;
+  align-items: center;
+}
+.text2 p 
+{
+  font-size: 1.0em;
+  width: 100%;
+  text-align: left;
+  max-width: 410px;
+  right: 70%;
+  left: 12%;
+  top: 27%;
+  align-items: center;
+}
+.contain 
+{
+  width: 100%;
+  height: 57%;
+  position: relative;
+  right: 20%;
+  top: 18%;
+  
+}
+}
+
